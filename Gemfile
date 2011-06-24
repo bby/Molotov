@@ -9,7 +9,10 @@ group :development, :test do
   gem 'sqlite3-ruby', :require => 'sqlite3'
 end
 
-gem 'pg'
+group :production do
+	gem 'pg'
+end
+
 
 # Use unicorn as the web server
 # gem 'unicorn'
