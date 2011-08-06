@@ -1,0 +1,10 @@
+<h1>Add your team members.</h1>
+<%= form_for @member do |f| %>
+	<%= f.label :team_id, 'Team', :class => :label %> :
+	<%= collection_select :member, :team_id, Team.find(:all, :order => 'title ASC'), :id, :title, { :selected => @member.team_id } -%>
+	
+	<%= f.label :twitter_handle %> :
+	<%= f.text_field 'twitter_handle' %>
+	
+	<%= f.submit 'create' %>
+<% end %>

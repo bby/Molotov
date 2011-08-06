@@ -1,0 +1,17 @@
+<h1>Drop the bomb</h1>
+<p>Click beneath to drop a bomb at the location indicated on the map.</p>
+<%= form_for @cocktail do |f| %>
+	<%= f.label :longitude %> :
+	<%= f.text_field 'longitude' %>
+	
+	<%= f.label :latitude %> :
+	<%= f.text_field 'latitude' %>
+	
+	<%= f.label :accuracy %> :
+	<%= f.text_field 'accuracy' %>
+	
+	<%= f.submit 'drop' %>
+<% end %>
+<div id="map_canvas">
+<p>Please activate javascript in your browser.</p>
+</div>

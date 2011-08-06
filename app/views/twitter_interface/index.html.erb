@@ -1,0 +1,10 @@
+<% for message in @messages -%>
+
+<% if message.geo_enabled %>
+	<%= message.location %>
+<% end %>
+<p><%= message.text %></p>
+<p><%= message.recipient[:location].inspect %></p>
+<p><%= message.inspect %></p>
+<p><%= message.text.match('#molotov') %></p>
+<% end -%>
